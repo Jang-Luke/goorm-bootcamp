@@ -1,13 +1,11 @@
+import static commons.Commons.*;
+
 void main() {
-    printDataType();
-    printDelimiter();
-    printTypeCasting();
-    printDelimiter();
-    printVariablePractice();
-    printDelimiter();
-    printConstants();
-    printDelimiter();
-    printAssignment();
+    printSubject(this::printDataType);
+    printSubject(this::printTypeCasting);
+    printSubject(this::printVariablePractice);
+    printSubject(this::printConstants);
+    printSubject(this::printAssignment);
 }
 
 void printDataType() {
@@ -117,20 +115,4 @@ void printAssignment() {
     System.out.println("상품 금액: " + totalPrice + "원");
     System.out.println("세금 (10%): " + tax + "원");
     System.out.println("최종 금액: " + finalPrice + "원");
-}
-
-void printTitle(String title) {
-    System.out.printf("###### %s ######%n", title);
-}
-
-void printSubtitle(String title) {
-    System.out.printf("===== %s =====%n", title);
-}
-
-void printDelimiter() {
-    System.out.println();
-    System.out.println();
-    System.out.println("====================");
-    System.out.println();
-    System.out.println();
 }
